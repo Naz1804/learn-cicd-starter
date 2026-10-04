@@ -18,5 +18,8 @@ jobs:
         with:
           go-version: "1.27.1"
 
-      - name: Print Version
+      - name: Style
+        run: test -z $(go fmt ./...)
+
+      - name: Test Version
         run: go test ./... -cover
